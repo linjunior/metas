@@ -1,0 +1,18 @@
+#login{
+    color: white;
+}
+#spinner {
+    text-align: center;
+    display: none;
+}
+#imagem-perfil{
+    height: 24px;
+}
+#content-wrapper{
+    padding: 33px;
+    background-color: #15242542;
+}
+.cards{
+    width: 390px;
+    
+}
