@@ -1,5 +1,13 @@
 {
   "projects": {
     "default": "metas-a716f"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
   }
 }

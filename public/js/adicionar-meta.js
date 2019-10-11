@@ -18,26 +18,17 @@ evniar.click(function () {
     })
     if (Object.keys(data).length == 3) {
 
-        data['metaInicial'] = $("#metaInicial").val()
-        data['metaFinal'] = $("#metaFinal").val()
-        var now = new Date();
-        data['dtInicio'] = now
-        data['dataFinal'] = $("#dataFinal").val()
-        
-        
-        firebase.database().ref("metas/" + user).set({
-            metaInicial: $("#metaInicial").val(),
-            metaFinal: $("#metaFinal").val(),
-            dtInicio: now,
-            dataFinal: $("#dataFinal").val()
-        });
 
-        /*
+        var now = new Date();
+        data[input.data("dataInicio")] = now.getDate()
+
+
+        
         firebase.database().ref("/usuarios/" + user + "/metas").push(data)
             .catch(error => {
                 console.log(error);
 
-            })*/
+            })
             
         form.each(function () {
             $(this).val('')

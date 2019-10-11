@@ -19,13 +19,13 @@ firebase.auth().onAuthStateChanged(user => {
             window.location.pathname = '/index.html'
         }
         var idUsuario = user.uid
-        firebase.database().ref('usuarios/' + idUsuario).set({
+        firebase.database().ref('users/' + idUsuario).set({
             username: user.displayName,
             email: user.email,
             profile_picture: user.photoURL,
             tipoUsuario: 'aluno'
         });
-        firebase.database().ref('usuarios/' + idUsuario + '/gastos/').on('child_removed', function (snapshot) {
+        firebase.database().ref('usuarios/' + idUsuario + '/metas/').on('child_removed', function (snapshot) {
             removeG_index(snapshot.val())
         })
     }
